@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>indice de masa corporal</title>
+    </head>
+    <body>
+        <h1>indice de masa corporal</h1>
+         <!--FORMULARIO HTML -->
+         <P>ingrese el Peso:<input type="text" id="Peso"></P>
+         <P>ingrese la Altura: <input type="text" id="Altura"></P>
+         <button id="Calcular" >Calcular</button>
+         <p>IMC: <span id="multiplicar"></span></p>
+         
+        <!--SCRIPT PARA CALCULAR Y PRODUCTO-->
+        <script type="text/javascript">
+        Peso = document.getElementById("Peso");
+        Altura = document.getElementById("Altura");
+        Calcular = document.getElementById("Calcular");
+        multiplicar = document.getElementById("multiplicar");
+
+
+     Calcular.onclick = function(){
+     if(Peso.value!=""&& Altura.value!=""){
+         multi = (Peso.value/(Altura.value*Altura.value));
+         multiplicar.innerHTML = multi
+
+
+        
+         console.log(multi);
+
+
+     }else{
+         alert("debes ingresar el primer y segundo numero.")
+     }
+
+
+
+     };
+</script>
+</body>
+</html>
